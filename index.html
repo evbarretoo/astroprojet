@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+    }
+    *{
+      animation: 10s linear infinite;
+    }
+    .days {
+      width: 100vw;
+      height: 100vh;
+      background-color: #839eec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation-name: animate-days;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .beyon,
+    .haru {
+      position: absolute;
+      width: 50vmin;
+      height: 50vmin;
+      border-radius: 50%;
+    }
+    .beyon {
+      background-color: #fdda01;
+      animation-name: animate-beyon;
+    }
+    
+    .haru {
+      background-color: #d1cfd7;
+      animation-name: animate-haru;
+    }
+    @keyframes animate-days {
+      50% {
+        background-color: black;
+      }
+    }
+    
+    @keyframes animate-beyon {
+      50% {
+        box-shadow: 0 0 5em 1em white;
+      }
+    }
+
+    @keyframes animate-haru {
+      from {
+        transform: translateX(-100vmin);
+      }
+      
+      50% {
+        background-color: black;
+      }
+
+      to {
+        transform: translateX(100vmin);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class = 'days'>
+    <div class = 'beyon'></div>
+    <div class = 'haru'></div>
+  </div>
+</body>
+</html>
